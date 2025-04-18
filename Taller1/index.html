@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Rick and Morty</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cielo-espacial">
+        </div>
+
+        <header>
+            <h1>Mundo Rick and Morty</h1>
+            <div class="animacion-portal">
+                <div class="portal"></div>
+            </div>
+        </header>
+
+        <div class="seccion-busqueda">
+            <div class="contenedor-busqueda">
+                <input type="text" id="entradaBusqueda" placeholder="Buscar personajes..." aria-label="Buscar personajes">
+                <button id="botonBuscar">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+            <div class="opciones-filtro">
+                <select id="filtroEstado">
+                    <option value="">Estado: Todos</option>
+                    <option value="alive">Vivo</option>
+                    <option value="dead">Muerto</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+                <select id="filtroEspecie">
+                    <option value="">Especie: Todas</option>
+                    <option value="Human">Humano</option>
+                    <option value="Alien">Alien</option>
+                    <option value="Robot">Robot</option>
+                    <option value="Humanoid">Humanoide</option>
+                    <option value="Mythological">Mitológico</option>
+                </select>
+                <select id="filtroGenero">
+                    <option value="">Género: Todos</option>
+                    <option value="Male">Masculino</option>
+                    <option value="Female">Femenino</option>
+                    <option value="Genderless">Sin género</option>
+                    <option value="unknown">Desconocido</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="contenedor-cargando">
+            <div class="spinner-cargando"></div>
+        </div>
+
+        <div id="resultados">
+            <div class="estadisticas" id="estadisticas">
+                <h3>Estadísticas de la búsqueda</h3>
+                <div class="contador-resultados">Total de personajes: <span id="totalPersonajes">0</span></div>
+                <div class="distribucion-especies" id="distribucionEspecies"></div>
+            </div>
+            
+            <div class="cuadricula-personajes" id="cuadriculaPersonajes"></div>
+            
+            <div class="paginacion" id="paginacion">
+                <button id="paginaAnterior" disabled><i class="fas fa-chevron-left"></i> Anterior</button>
+                <span id="infoPagina">Página 1</span>
+                <button id="paginaSiguiente"><i class="fas fa-chevron-right"></i> Siguiente</button>
+            </div>
+        </div>
+
+        <div id="sinResultados" class="sin-resultados">
+            <i class="fas fa-question-circle"></i>
+            <p>No se encontraron personajes con esos criterios. ¡Intenta otra búsqueda!</p>
+        </div>
+
+        <div id="mensajeError" class="mensaje-error">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>¡Ups! Algo salió mal. Por favor, intenta de nuevo más tarde.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desarrollado para el Taller 1 de Consumo de APIs | <a href="https://rickandmortyapi.com/" target="_blank">Rick and Morty API</a> | 2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
