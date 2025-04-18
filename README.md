@@ -26,7 +26,7 @@ La aplicación permite a los usuarios:
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/mundo-rick-and-morty.git
+   git clone https://github.com/20251-Ingenieria-WEB/taller-html-johansebastian-henaoca-as.git
    cd mundo-rick-and-morty
    ```
 
